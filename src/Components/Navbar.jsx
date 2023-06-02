@@ -4,9 +4,7 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
-import ListAltIcon from "@mui/icons-material/ListAlt";
 import HomeIcon from "@mui/icons-material/Home";
-import ContactsIcon from "@mui/icons-material/Contacts";
 import logoImg from "../media/navlogo3.png";
 import { Container } from "@mui/system";
 import CustomButton from "./CustomButton";
@@ -19,7 +17,6 @@ import {
   ListItemText,
   styled,
 } from "@mui/material";
-import { LinkOffTwoTone } from "@mui/icons-material";
 
 export const Navbar = () => {
   const [hideOnScroll, setHideOnScroll] = useState(false);

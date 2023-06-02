@@ -1,102 +1,95 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, styled, Typography } from "@mui/material";
+import { Box, Card, CardActions, Button, CardContent, CardMedia, Typography, styled } from "@mui/material";
 import React from "react";
-import bedroomsIcon from "../media/bedroomsIcon.png";
-import bathroomsIcon from "../media/bathroomsIcon.png";
-import spaceIcon from "../media/spaceIcon.png";
 
-const House = ({ img, price, address, bedrooms, bathrooms, space }) => {
-  const HouseBox = styled(Box)(({ theme }) => ({
-    borderTopLeftRadius: "10px",
-    borderTopRightRadius: "10px",
-    maxWidth: 350,
-    backgroundColor: "#fff",
-    margin: theme.spacing(0, 2, 0, 2),
-    [theme.breakpoints.down("md")]: {
-      margin: theme.spacing(2, 0, 2, 0),
-    },
-  }));
+const CustomCard = styled(Card)(({ theme }) => ({
+  position: "relative",
+  width: 345, // Set a fixed width for all cards
+  borderRadius: theme.spacing(1),
+  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
+  transition: "transform 0.3s ease",
+  "&:hover": {
+    transform: "scale(1.05)",
+  },
+}));
 
-  const InfoBox = styled(Box)(() => ({
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  }));
+const OverlayContainer = styled(Box)(({ theme }) => ({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  borderRadius: theme.spacing(1),
+  background: "linear-gradient(to bottom, rgba(0.3,0.3,0.3,0.3) 0%, #E6F0FF 100%)",
+  opacity: 0,
+  transition: "opacity 0.3s ease",
+  "&:hover": {
+    opacity: 1,
+  },
+}));
 
-  const ImgContainer = styled(Box)(() => ({
-    width: "100%",
-    backgroundColor: "#D9D9D93D",
-    borderRadius:"10px"
-  }));
+const CustomCardContent = styled(CardContent)(({ theme }) => ({
+  paddingBottom: `${theme.spacing(2)} !important`,
+  position: "relative",
+  zIndex: 1,
+  textAlign: "center", // Align the text to the center
+}));
 
+const CustomCardActions = styled(CardActions)(({ theme }) => ({
+  justifyContent: "center",
+  padding: theme.spacing(2), // Add padding to the card actions
+}));
+
+const CustomButtonContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  gap: theme.spacing(2),
+  width: "100%", // Set the width to occupy the full width of the card actions
+  textAlign: "center", // Align the buttons to the center
+}));
+
+const CustomButton = styled(Button)(({ theme }) => ({
+  backgroundColor: "#0F1B4C",
+  color: theme.palette.common.white,
+  "&:hover": {
+    backgroundColor: theme.palette.primary.dark,
+  },
+}));
+const NavLink = styled(Typography)(({ theme }) => ({
+  fontSize: "14px",
+  color: "#4F5361",
+  fontWeight: "bold",
+  cursor: "pointer",
+  "&:hover": {
+    color: "#fff",
+  },
+}));
+const House = ({ img, address }) => {
   return (
-    <Card sx={{ width: 345, bgcolor:"#D9D9D93D"}}>
-    {/* <HouseBox> */}
+    <CustomCard>
       <CardMedia
-        sx={{ height: 290, }}
-        image={img}
-        title=""
-        // sx={{ padding: "1em 1em 0 1em", objectFit: "contain" }}
+        component="img"
+        src={img}
+        alt="housePhoto"
+        sx={{ width: "100%", objectFit: "cover" }}
       />
-      {/* <ImgContainer>
-        <img src={img} alt="housePhoto" style={{ maxWidth: "100%" }} />
-      </ImgContainer> */}
 
-      <Box sx={{ padding: "1rem" }}>
-        {/* <Typography variant="body2" sx={{ fontWeight: "700" }}>
-          ${price}
-        </Typography> */}
-          <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-        {address}
+      <OverlayContainer />
+
+      <CustomCardContent>
+        <Typography variant="h5" sx={{ mb: 2 }}>
+          {address}
         </Typography>
-        {/* <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography> */}
-      </CardContent>
-      <CardActions>
-        <Button size="small">Apply Now</Button>
-        <Button size="small">About</Button>
-      </CardActions>
-        <Typography variant="body2" sx={{ my: 2 }}>
-          
-        </Typography>
-        <Typography variant="body2" sx={{ my: 2 }}>
-          
-        </Typography>
+      </CustomCardContent>
 
-        {/* <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <InfoBox>
-            <img src={bedroomsIcon} alt="bedroomsIcon" />
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              {bedrooms}
-            </Typography>
-          </InfoBox>
-
-          <InfoBox>
-            <img src={bathroomsIcon} alt="bathroomssIcon" />
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              {bathrooms}
-            </Typography>
-          </InfoBox>
-
-          <InfoBox>
-            <img src={spaceIcon} alt="spaceIcon" />
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              {space}
-            </Typography>
-          </InfoBox>
-        </Box> */}
-      </Box>
-    {/* </HouseBox> */}
-    </Card>
-
+      <CustomCardActions>
+        <CustomButtonContainer>
+          <CustomButton size="small" color="secondary">
+            About
+          </CustomButton>
+        <Button><NavLink variant="body2">Apply Now</NavLink></Button>
+        </CustomButtonContainer>
+      </CustomCardActions>
+    </CustomCard>
   );
 };
 
