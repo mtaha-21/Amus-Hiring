@@ -1,6 +1,9 @@
+import Companies from "./Components/Companies";
+import Guide from "./Components/Guide";
 import Hero from "./Components/Hero";
 import Properties from "./Components/Properties";
 import Details from "./Components/Details";
+import GetStarted from "./Components/GetStarted";
 import Footer from "./Components/Footer";
 import AboutAmus from "./Components/AboutAmus";
 import GridComponent from "./Components/GridComponent";
@@ -12,9 +15,12 @@ function App() {
       <Hero />
       <Properties />
       <Details />
-      <AboutAmus />
-      <GridComponent />
-      <CountComp />
+      <AboutAmus/>
+      <GridComponent/>
+      <CountComp/>
+      {/* <Companies />
+      <Guide />
+      <GetStarted /> */}
       <Footer />
     </>
   );
