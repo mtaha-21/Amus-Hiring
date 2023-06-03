@@ -13,7 +13,7 @@ const ImgContainer = styled(Box)(({ theme }) => ({
 
 const HeadingText = styled(Typography)(({ theme }) => ({
   fontSize: "35px",
-  color: "#000339",
+  color: "#03265B",
   fontWeight: "700",
   my: 3,
   [theme.breakpoints.down("md")]: {
@@ -29,9 +29,9 @@ const HeadingText = styled(Typography)(({ theme }) => ({
 
 const BodyText = styled(Typography)(({ theme }) => ({
   fontSize: "22px",
-  fontFamily:"sans-serif",
+  fontFamily:"Popine",
   fontWeight:"300",
-  color: "#5A6473",
+  color: "rgba(0, 0, 0, 1)",
   lineHeight: "27px",
   marginBottom:"2rem",
   [theme.breakpoints.down("md")]: {
@@ -59,8 +59,8 @@ const Divider = styled("div")(({ theme }) => ({
 }));
 
 const DividerText = styled(Typography)(({ theme }) => ({
-  fontSize: "18px",
-  color: "#000339",
+  fontSize: "25px",
+  color: "#03265B",
   fontWeight: "700",
   my: 3,
   [theme.breakpoints.down("md")]: {
@@ -74,7 +74,7 @@ const Details = () => {
       <Container>
         <Grid container spacing={5} direction={{ xs: "column-reverse", sm: "row-reverse" }}>
           <Grid item xs={12} sm={6} md={8}>
-            <Box sx={{ py: { xs: 3, sm: 5 }, pr: { xs: 0, sm: 5, md: 10 } }}>
+            <Box sx={{ py: { xs: 3, sm: 5 }, pr: { xs: 0, sm: 5, md: 10 },marginLeft:"70px" }}>
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 <DividerText>Hiring</DividerText>
                 <Divider />
@@ -101,7 +101,7 @@ const Details = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <ImgContainer>
-              <img src={houseCard} alt="house" style={{ maxWidth: "80%", height: "auto" }} />
+              <img src={houseCard} alt="house" style={{ maxWidth: "90%", height: "auto" }} />
             </ImgContainer>
           </Grid>
         </Grid>

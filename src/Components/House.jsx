@@ -70,13 +70,13 @@ const House = ({ img, address }) => {
         component="img"
         src={img}
         alt="housePhoto"
-        sx={{ width: "100%", objectFit: "cover" }}
+        sx={{ width: "100%", objectFit: "none" }}
       />
 
       <OverlayContainer />
 
       <CustomCardContent>
-        <Typography variant="h5" sx={{ mb: 2 }}>
+        <Typography variant="h5" sx={{ color:"rgba(3, 38, 91, 1)"}}>
           {address}
         </Typography>
       </CustomCardContent>

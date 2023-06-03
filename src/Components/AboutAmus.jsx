@@ -11,7 +11,7 @@ const ImgContainer = styled(Box)(({ theme }) => ({
 
 const HeadingText = styled(Typography)(({ theme }) => ({
   fontSize: "35px",
-  color: "#000339",
+  color: "rgba(0, 0, 0, 0.5)",
   fontWeight: "700",
   my: 3,
   textAlign:"center",
@@ -22,9 +22,9 @@ const HeadingText = styled(Typography)(({ theme }) => ({
 
 const BodyText = styled(Typography)(({ theme }) => ({
   fontSize: "22px",
-  fontFamily:"sans-serif",
+  fontFamily:"popins",
   fontWeight:"300",
-  color: "#5A6473",
+  color: "rgba(0, 0, 0, 0.5)",
   lineHeight: "27px",
   marginBottom:"2rem",
   [theme.breakpoints.down("md")]: {
@@ -69,7 +69,7 @@ accomplish your dream.`,
     <Box sx={{ py: 10 }}>
       <Container>
         <HeadingText sx={{mb: 5}}>
-          Why Amus Soft constantly superior to others
+          Why <span style={{color: "#03265B"}}  > Amus Soft </span> constantly superior to others
         </HeadingText>
         <Grid container spacing={4}>
           {sections.map((section, index) => {
@@ -77,7 +77,7 @@ accomplish your dream.`,
             return (
               <React.Fragment key={index}>
                 <ResponsiveGridItem item xs={12} md={6} order={isImageFirst ? 1 : 0} sx={{ py: 5 }}>
-                  <HeadingText>
+                  <HeadingText sx={{color: "#03265B",   marginRight:"20px"}}> 
                     {section.title}
                   </HeadingText>
                   <BodyText>
@@ -86,7 +86,7 @@ accomplish your dream.`,
                 </ResponsiveGridItem>
                 <ResponsiveGridItem item xs={12} md={6} order={isImageFirst ? 0 : 1} sx={{ py: 5 }}>
                   <ImgContainer>
-                    <img src={section.image} alt="section illustration" style={{ maxWidth: "80%" }} />
+                    <img src={section.image} alt="section illustration" style={{ maxWidth: "100%" }} />
                   </ImgContainer>
                 </ResponsiveGridItem>
               </React.Fragment>

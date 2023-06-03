@@ -18,9 +18,9 @@ const cards = [
   { id: 1, img: img1, title: "Freight Forwarding, Logistics, Transport & Supply Chain specialist", alt: "Truck", description: ""},
   { id: 2, img: img2, title: "Save up to 80% of your manager's time spent in the hiring process", alt: "Sand Time", description: ""},
   { id: 3, img: img3, title: "Save up to 60% in your resource cost hiring remotely with AMUS HIRING", alt: "Save Money", description: ""},
-  { id: 4, img: img4, title: "Quick Incorporation to your team", alt: "Team", description: ""},
-  { id: 5, img: img5, title: "Hire remote professionals, who speak your own language", alt: "Team 2", description: ""},
-  { id: 6, img: img6, title: "Certified professionals", alt: "Message box", description: ""},
+  { id: 4, img: img4, title: "Quick Incorporation to your team", alt: "Team", },
+  { id: 5, img: img5, title: "Hire remote professionals, who speak your own language", alt: "Team 2", },
+  { id: 6, img: img6, title: "Certified professionals", alt: "Message box",},
 ];
 
 function SampleNextArrow(props) {
@@ -67,7 +67,7 @@ function SamplePrevArrow(props) {
     </IconButton>
   );
 }
-const CardItem = ({ id, img, title, alt, description }) => (
+const CardItem = ({ id, img, title, alt }) => (
   <div key={id}>
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -76,9 +76,10 @@ const CardItem = ({ id, img, title, alt, description }) => (
           height="140"
           image={img}
           alt={alt}
+          sx={{width: "80%",objectFit: "contain",marginLeft:"30px"}}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="div" sx={{ color:"rgba(3, 38, 91, 0.55)",fontSize:"22px" }}>
             {title}
           </Typography>
           {/* <Typography variant="body2" color="text.secondary">

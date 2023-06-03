@@ -28,12 +28,13 @@ const Hero = () => {
     },
   }));
   const Title = styled(Typography)(({ theme }) => ({
-    fontSize: "50px",
-    color: "#000336",
+    fontSize: "40px",
+    color: "rgba(4, 13, 27, 0.97)",
     fontWeight: "bold",
-    margin: theme.spacing(4, 0),
+    fontFamily:"Poppins",
+    margin: theme.spacing(2, 0),
     [theme.breakpoints.down("sm")]: {
-      fontSize: "40px",
+      fontSize: "35px",
     },
   }));
   const SubTitle = styled(Typography)(({ theme }) => ({
@@ -50,7 +51,7 @@ const Hero = () => {
     <Box
       sx={{
         backgroundColor: "#E6F0FF",
-        minHeight: "100vh",
+        minHeight: "90vh",
         paddingTop: "10rem",
       }}
     >
@@ -63,10 +64,10 @@ const Hero = () => {
                 variant="body2"
                 sx={{
                   fontSize: "18px",
-                  color: "#687690",
+                  color: "#03265B",
                   fontWeight: "500",
-                  mt: 10,
-                  mb: 4,
+                  mt: 6,
+                  mb: 1,
                 }}
               >
                 Hire remote employees in a few clicks
@@ -76,7 +77,7 @@ const Hero = () => {
               </Title>
               <Typography
                 variant="body2"
-                sx={{ fontSize: "18px", color: "#5A6473", my: 4 }}
+                sx={{ fontSize: "18px", color: "#rgba(3, 38, 91, 0.92)", my: 1 }}
               >
                 <ul>
                   <li>Save your time and money.</li>
@@ -99,7 +100,7 @@ const Hero = () => {
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 <SubTitle variant="p">Looking for remote jobs?</SubTitle>
                 <Button>
-                  <NavLink variant="body2">Sign Up</NavLink>
+                  <NavLink variant="body2">Apply now</NavLink>
                 </Button>
               </Box>
             </Box>

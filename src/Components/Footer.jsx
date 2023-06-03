@@ -49,16 +49,18 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              Products
+              Companies
             </Typography>
 
-            <FooterLink>Listing</FooterLink>
+            <FooterLink>Hire Employee</FooterLink>
             <br />
-            <FooterLink>Properties</FooterLink>
+            <FooterLink>Get Remote Job</FooterLink>
             <br />
-            <FooterLink>Agents</FooterLink>
+            <FooterLink>How to hire</FooterLink>
             <br />
-            <FooterLink>Blog</FooterLink>
+            <FooterLink>Customer Reviews</FooterLink>
+            <br />
+            <FooterLink>HIring Resource</FooterLink>
           </Box>
 
           <Box>
@@ -70,16 +72,16 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              Resources
+              Developer
             </Typography>
 
-            <FooterLink>Our Homes</FooterLink>
+            <FooterLink>Apply for job</FooterLink>
             <br />
-            <FooterLink>Stories</FooterLink>
+            <FooterLink>Developer Login</FooterLink>
             <br />
-            <FooterLink>Video</FooterLink>
+            <FooterLink>Remote Developer job</FooterLink>
             <br />
-            <FooterLink>Free Trial</FooterLink>
+            <FooterLink>Developer Reviews</FooterLink>
           </Box>
 
           <Box>
@@ -94,13 +96,15 @@ const Footer = () => {
               Company
             </Typography>
 
-            <FooterLink>Partnerships</FooterLink>
+            <FooterLink>PRIVACY POLICY </FooterLink>
             <br />
-            <FooterLink>Terms of use</FooterLink>
+            <FooterLink>Careers</FooterLink>
+            <br />                          
+            <FooterLink>TERMS & CONDITIONS </FooterLink>
             <br />
-            <FooterLink>Privacy</FooterLink>
+            <FooterLink>LEGAL NOTICE    </FooterLink>
             <br />
-            <FooterLink>Sitemap</FooterLink>
+            <FooterLink>COOKIES POLICIES</FooterLink>
           </Box>
 
           <Box>
