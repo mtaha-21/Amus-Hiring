@@ -1,24 +1,16 @@
-import Hero from "./Components/Hero";
-import Properties from "./Components/Properties";
-import Details from "./Components/Details";
-import Footer from "./Components/Footer";
-import AboutAmus from "./Components/AboutAmus";
-import GridComponent from "./Components/GridComponent";
-import CountComp from "./Components/CountComp";
 
+//import Footer from "./Components/Footer";
+//import Home from "./Components/Home/Home";
+
+//import Employee from "./Components/HireEmployerPage/Employee";//
+import Home from "./Components/Home/Home";
 function App() {
   return (
     <>
-      <Hero />
-      <Properties />
-      <Details />
-      <AboutAmus/>
-      <GridComponent/>
-      <CountComp/>
-      {/* <Companies />
-      <Guide />
-      <GetStarted /> */}
-      <Footer />
+
+
+   {/*  <Home/>
+      <Footer />*/}
     </>
   );
 }

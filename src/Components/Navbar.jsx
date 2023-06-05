@@ -17,6 +17,8 @@ import {
   ListItemText,
   styled,
 } from "@mui/material";
+import { Link } from 'react-router-dom';
+
 
 export const Navbar = () => {
   const [hideOnScroll, setHideOnScroll] = useState(false);
@@ -141,11 +143,11 @@ export const Navbar = () => {
     transition: 'opacity 0.3s',
     justifyContent: "space-between",
     position: "fixed",
-    top: 20,
-    zIndex: 1000,
-    width: '80%',
+    //top: 20,
+   // zIndex: 1000,
+    width: '100%',
     backgroundColor: "#F5F5F5",
-    borderRadius:"10px",
+   // borderRadius:"10px",
     padding: theme.spacing(3),
     [theme.breakpoints.down("md")]: {
       padding: theme.spacing(2),
@@ -185,9 +187,9 @@ export const Navbar = () => {
         </Box>
 
         <NavbarLinksBox>
-          <NavLink variant="body2">Home</NavLink>
-          <NavLink variant="body2">Hire Employee</NavLink>
-          <NavLink variant="body2">Get Remote Job</NavLink>
+        <Link to="/"> <NavLink variant="body2">Home</NavLink></Link>
+        <Link to="/Hire_Employee"> <NavLink variant="body2">Hire Employee</NavLink></Link>
+         <Link to="/Get_Remote_Job"> <NavLink variant="body2">Get Remote Job</NavLink></Link>
           {/* <NavLink variant="body2">Listed</NavLink>
           <NavLink variant="body2">Contact</NavLink> */}
         </NavbarLinksBox>

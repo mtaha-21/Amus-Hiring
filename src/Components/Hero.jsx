@@ -1,7 +1,7 @@
 import { Box, Button, Grid, styled, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
-import Navbar from "./Navbar";
+//import Navbar from "./Navbar";
 
 import heroImg from "../media/Homepage 12.png";
 import CustomButton from "./CustomButton";
@@ -56,7 +56,7 @@ const Hero = () => {
       }}
     >
       <Container>
-        <Navbar />
+       
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={6}>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
