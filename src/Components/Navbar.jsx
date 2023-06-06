@@ -145,7 +145,7 @@ export const Navbar = () => {
     position: "fixed",
     //top: 20,
    // zIndex: 1000,
-    width: '100%',
+   minWidth: '100%',
     backgroundColor: "#F5F5F5",
    // borderRadius:"10px",
     padding: theme.spacing(3),
